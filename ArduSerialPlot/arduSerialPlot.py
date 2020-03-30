@@ -1,3 +1,7 @@
+#Arduino ( UNO/nano) communication to PC(Win10/Ubuntu) over pyserial example.
+#Python script over pyserial get data from Arduino analog port(A0) and plotting  Matplotlib graph.
+#Init to Arduino boards arduinoSerialPlot.ino before.
+
 import serial
 import matplotlib.pyplot as plt
 from drawnow import *
@@ -16,7 +20,7 @@ serialArdu = serial.Serial('COM3', baudrate=9600, timeout=1)
 time.sleep(2)
 
 def plotValues():
-    plt.title('Serial value from Arduino')
+    plt.title('Analog port(A0) value from Arduino')
     plt.grid(True)
     plt.ylabel('Values')
     plt.plot(values, 'rx-', label='values')
